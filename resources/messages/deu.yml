@@ -1,0 +1,15 @@
+---
+# Unban Messages
+UnbanError-Message: "§cDieser Spieler ist nicht gebannt."
+Unban-Message: "§aDer Spieler §2{player} §awurde entbannt."
+
+# Ban List Messages
+BanList: "§bGebannte Spieler:"
+
+# Ban Messages
+Success: "§aDer Spieler §2{banned-player} §awurde erfolgreich für §2{reason} §agebannt."
+Kick-Message: "§cDu wurdest vom Netzwerk verbannt!\n§cRejoine um mehr Infos zu erhalten."
+
+# ID List
+ID-List: "§cBan IDs:\n§e1 - Hacking (30 Tage)\n§e2 - Beleidigung (1 Tag)\n§e3 - Respektloses Verhalten (2 Stunden)\n§e4 - Provokantes Verhalten (1 Stunde)\n§e5 - Spamming (1 Stunde)\n§e6 - Werbung (3 Tage)\n§e7 - Report Missbrauch (1 Stunde)\n§e8 - Wortwahl / Drohung (14 Tage)\n§e9 - Teaming (3 Tage)\n§e10 - Bugusing (1 Tag)\n§e99 - Ban von einem Admin (1 Jahr)"
+...

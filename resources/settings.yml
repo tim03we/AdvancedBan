@@ -1,0 +1,6 @@
+---
+# Change the Plugin Language
+# "deu" -> German
+# "eng" -> English
+Language: "deu"
+...

@@ -1,0 +1,15 @@
+---
+# Unban news
+UnbanError-Message: "§cThis player is not banned."
+Unban-Message: "§aThe player §2{player} §awas unban."
+
+# Ban List messages
+BanList: "§bBanned Players:"
+
+# Ban news
+Success: "§aThe Player §2{banned-player} §ahas been successfully banned for §2{reason}."
+Kick-Message: "§cDu have been banished from the network!\n§cRejoine to get more info."
+
+# ID List
+ID-List: "§cBan IDs:\n§e1 - Hacking (30 days)\n§e2 - Insult (1 day)\n§e3 - Disrespectful behavior (2 hours)\n§e4 - Provocative behavior (1 hour)\n§e5 - Spamming (1 hour)\n§e6 - Advertising (3 days)\n§e7 - Report Abuse (1 hour)\n§e8 - Wording / threat (14 days)\n§e9 - Teaming (3 days)\n§e10 - Bugusing (1 day)\n§e99 - Ban by an admin (1 year)"
+...
