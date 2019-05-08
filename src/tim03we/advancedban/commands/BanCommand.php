@@ -62,12 +62,9 @@ class BanCommand extends Command {
                     $banlist->set(strtolower($args[0]), 0);
                     if($target == null) {
                         $banlist->set(strtolower($args[0]), $id . ", " . $by . ", " . $format);
-                    } else {
-                        $banlist->set(strtolower($sender2->getName()), $id . ", " . $by . ", " . $format);
-                    }
-                    if($target == null) {
                         $sender->sendMessage("The player " . strtolower($args[0]) . " could not be found, but was banned anyway.");
                     } else {
+                        $banlist->set(strtolower($sender2->getName()), $id . ", " . $by . ", " . $format);
                         if($settings->get("Language") === "deu") {
                             $msg = $deu->get("Success");
                             $msg = str_replace("{reason}", $idList['Reason'], $msg);
