@@ -59,18 +59,26 @@ class BanCommand extends Command {
                     $format = $date->format('Y-m-d H:i:s');
                     $by = $sender->getName();
                     $id = $args[1];
-                    $reason = $idList['Reason'];
-                    $bannedPlayer = $args[0];
                     $banlist->set(strtolower($args[0]), 0);
-                    $banlist->set(strtolower($args[0]), $id . ", " . $by . ", " . $format);
+                    if($target == null) {
+                        $banlist->set(strtolower($args[0]), $id . ", " . $by . ", " . $format);
+                    } else {
+                        $banlist->set(strtolower($sender2->getName()), $id . ", " . $by . ", " . $format);
+                    }
                     if($target == null) {
                         $sender->sendMessage("The player " . strtolower($args[0]) . " could not be found, but was banned anyway.");
                     } else {
                         if($settings->get("Language") === "deu") {
-                            $sender->sendMessage($this->convert($deu->get("Success"), $reason, $bannedPlayer));
+                            $msg = $deu->get("Success");
+                            $msg = str_replace("{reason}", $idList['Reason'], $msg);
+                            $msg = str_replace("{banned-player}", strtolower($sender2->getName()), $msg);
+                            $sender->sendMessage($msg);
                             $target->kick($deu->get("Kick-Message"), false);
                         } else if($settings->get("Language") === "eng") {
-                            $sender->sendMessage($this->convert($eng->get("Success"), $reason, $bannedPlayer));
+                            $msg = $eng->get("Success");
+                            $msg = str_replace("{reason}", $idList['Reason'], $msg);
+                            $msg = str_replace("{banned-player}", strtolower($sender2->getName()), $msg);
+                            $sender->sendMessage($msg);
                             $target->kick($eng->get("Kick-Message"), false);
                         }
                     }
