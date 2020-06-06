@@ -59,7 +59,6 @@ class BanCommand extends Command {
                     $format = $date->format('Y-m-d H:i:s');
                     $by = $sender->getName();
                     $id = $args[1];
-                    $banlist->set(strtolower($args[0]), 0);
                     if($target == null) {
                         $banlist->set(strtolower($args[0]), $id . ", " . $by . ", " . $format);
                         $sender->sendMessage("The player " . strtolower($args[0]) . " could not be found, but was banned anyway.");
